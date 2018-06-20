@@ -1,18 +1,37 @@
-# crickit [![Build Status](https://travis-ci.org/adafruit/pxt-crickit.svg?branch=master)](https://travis-ci.org/adafruit/pxt-crickit)
+# DS18B20 Temperature Sensor for Microbit 
 
-A MakeCode package to use the Adafruit CRICKIT motor shield.
+## Table of Contents
 
-* [Read the Full Guide at learn.adafruit.com](https://learn.adafruit.com/adafruit-crickit-creative-robotic-interactive-construction-kit/makecode)
+* [Summary](#summary)
+* [Blocks](#blocks)
+* [Example](#example)
+* [License](#license)
+
+## Summary
+ 
+DS18B20 module, support single bus control, read temperature by pin1.
+
+## Blocks
+readTemperature<br>
+![image](https://github.com/mengbishu/pxt-ds18b20/blob/master/image/temp.png)<br>
+
+## Example
+Example for JavaScript
+```
+basic.forever(() => {
+    serial.writeLine("temp : "+DS18B20.Temp())
+    basic.pause(1000)
+    serial.writeValue("temp", DS18B20.Temperature())
+    basic.pause(1000)
+})
+```
 
 ## License
 
-MIT
-
+GUI
 ## Supported targets
 
-* for PXT/adafruit
-* for PXT/maker
-* for PXT/codal
-
+* for PXT/microbit
 (The metadata above is needed for package search.)
+
 

@@ -1,28 +1,20 @@
 {
-    "name": "crickit",
-    "version": "0.0.22",
-    "description": "MakeCode support for Adafruit CRICKIT",
+    "name": "DS18B20",
+    "version": "0.0.0",
+    "description": "This library is DS18B20",
     "license": "MIT",
     "dependencies": {
-        "core": "*",
-        "seesaw": "github:Adafruit/pxt-seesaw#v0.0.13"
+        "core": "*"
     },
     "files": [
         "README.md",
-        "motors.ts",
-        "signals.ts",
-        "servo.ts",
-        "touch.ts",
-        "drive.ts",
-        "pixel.ts",
-        "ns.ts"
+        "ds18b20.ts",
+        "ds18b20.cpp",
+        "shims.d.ts",
+        "_locales/zh/ds18b20-strings.json"
     ],
     "testFiles": [
-        "test.ts"
+        "tests.ts"
     ],
-    "testDependencies": {
-        "circuit-playground": "*"
-    },
-    "public": true,
-    "additionalFilePaths": []
+    "public": false
 }
