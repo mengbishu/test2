@@ -1,0 +1,28 @@
+{
+    "name": "crickit",
+    "version": "0.0.22",
+    "description": "MakeCode support for Adafruit CRICKIT",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+        "seesaw": "github:Adafruit/pxt-seesaw#v0.0.13"
+    },
+    "files": [
+        "README.md",
+        "motors.ts",
+        "signals.ts",
+        "servo.ts",
+        "touch.ts",
+        "drive.ts",
+        "pixel.ts",
+        "ns.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "testDependencies": {
+        "circuit-playground": "*"
+    },
+    "public": true,
+    "additionalFilePaths": []
+}
