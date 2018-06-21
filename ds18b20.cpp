@@ -24,7 +24,7 @@ class microbitp : public MicroBitComponent
         this->status = 0x00;
         this->pin = NULL;
     }
-    ~microbitp(){
+    void deletep(){
         if (status & 0x01)
             delete ((DigitalIn *)pin);
         if (status & 0x02)
@@ -173,7 +173,7 @@ class microbitp : public MicroBitComponent
         writeByte(0xBE);
         int b1 = readByte();
         int b2 = readByte();
-        //pin.deletep();
+        pin.deletep();
         int16_t temp = (b2 << 8 | b1);
         return temp * 100 / 16;
     }
