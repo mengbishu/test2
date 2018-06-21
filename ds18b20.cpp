@@ -36,11 +36,15 @@ class microbitp : public MicroBitComponent
     }
 
     void disconnect(){
-        val -= 1;
-        if (status & 0x01)
+        
+        if (status & 0x01){
             delete ((DigitalIn *)pin);
-        if (status & 0x02)
+            val -= 1;
+        }
+        if (status & 0x02){
             delete ((DigitalOut *)pin);
+            val -= 1;
+        }
     }
 
     int setDigitalValue(int value){
