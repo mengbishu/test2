@@ -23,10 +23,8 @@ class microbitp : public MicroBitComponent
         this->pullMode = 1;
         this->status = 0x00;
         this->pin = NULL;
-        printf("!!!!\n");
     }
     ~microbitp(){
-        printf("~~~~\n");
         if (status & 0x01)
             delete ((DigitalIn *)pin);
         if (status & 0x02)
