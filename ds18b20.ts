@@ -57,7 +57,6 @@ namespace DS18B20 {
         let x = (temp / 100)
         let y = (temp % 100)
         let z = ''
-        serial.writeLine("1")
         if(temp >= 0){
           if(y < 10){
             z = x.toString() + '.0' + y.toString()
@@ -74,7 +73,6 @@ namespace DS18B20 {
             z = '-' + (-x).toString() + '.' + (-y).toString()
           }
         }
-        serial.writeLine("2")
         return z
     }
 }
