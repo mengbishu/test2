@@ -1,47 +1,39 @@
-# joystick
-
-Micro:bit joystick expansion board.
----------------------------------------------------------
+# DS18B20 Temperature Sensor for Microbit 
 
 ## Table of Contents
 
 * [Summary](#summary)
 * [Blocks](#blocks)
+* [Example](#example)
 * [License](#license)
 
 ## Summary
- 
-Micro:bit joystick is based on micro:bit. All you need to do is plug in micro:bit board. 
-There are 2 buttons and 1 joystick in the Micro:bit joystick. 
-The two buttons are A and B, and joystick can control x and y. 
-This board also has built-in vibration motor and LED which can be controlled by programming. 
-The programming platform supports makecode graphical programming and python programming, 
-which is an ideal tool for programming from entry and even to advanced programming education.
-
+DS18B20 module, support single bus control, and read temperature.
 
 ## Blocks
+### Read temperature, return a number, makecode do not support floats, so the value is amplifies up to 100 times.
+![image](https://github.com/DFRobot/pxt-ds18b20/blob/master/image/number.png)<br>
 
-### 1.LED control
-![image](https://github.com/DFRobot/pxt-joystick/blob/master/image/led.png)
+### Read temperature, return a string.
+![image](https://github.com/DFRobot/pxt-ds18b20/blob/master/image/string.png)<br>
 
-### 2.Vibration motor control
-![image](https://github.com/DFRobot/pxt-joystick/blob/master/image/vibratorMotor.png)<br>
-![image](https://github.com/DFRobot/pxt-joystick/blob/master/image/vibratorMotorctr.png)<br>
-
-### 3.joystick control
-![image](https://github.com/DFRobot/pxt-joystick/blob/master/image/detectXY.png)<br>
-![image](https://github.com/DFRobot/pxt-joystick/blob/master/image/compare.png)<br>
-![image](https://github.com/DFRobot/pxt-joystick/blob/master/image/pressedZ.png)<br>
-![image](https://github.com/DFRobot/pxt-joystick/blob/master/image/ispressedZ.png)
-
-
-
+## Example
+Example for JavaScript
+```
+basic.forever(() => {
+    serial.writeValue("temp ", DS18B20.Temperature_number(DS18B20.pin.pin0))
+    basic.pause(1000)
+    serial.writeLine("temp : " + DS18B20.Temperature_string(DS18B20.pin.pin0))
+    basic.pause(1000)
+})
+```
 
 ## License
 
-MIT
+GUI
 ## Supported targets
 
 * for PXT/microbit
 (The metadata above is needed for package search.)
+
 
