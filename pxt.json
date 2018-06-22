@@ -1,20 +1,20 @@
 {
-    "name": "DS18B20",
+    "name": "joystick",
     "version": "0.0.0",
-    "description": "This library is DS18B20",
+    "description": "This library is DFRobot joystick provides the game handle control function.",
     "license": "MIT",
     "dependencies": {
-        "core": "*"
+        "core": "*",
+        "radio": "*"
     },
     "files": [
         "README.md",
-        "ds18b20.ts",
-        "ds18b20.cpp",
-        "shims.d.ts",
-        "_locales/zh/ds18b20-strings.json"
+        "main.ts",
+        "joystick.cpp",
+        "_locales/zh/joystick-strings.json"
     ],
     "testFiles": [
-        "tests.ts"
+        "test.ts"
     ],
     "public": false
 }

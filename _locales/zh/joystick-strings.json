@@ -1,0 +1,22 @@
+{
+	"Z_Pin.Z|block": "Z",
+	"XY_Pin.P1|block": "X",
+	"XY_Pin.P2|block": "Y",
+  "joystick.read.value_x|block": "X",
+  "joystick.read.value_y|block": "Y",
+	"joystick.joystickEvent.Down|block": "按下",
+	"joystick.joystickEvent.Up|block": "松开",
+	"joystick.joystickEvent.Click|block": "点击",
+	"joystick.Vibrator.V0|block": "停止",
+	"joystick.Vibrator.V1|block": "振动",
+	"joystick.Led.OFF|block": "灭",
+	"joystick.Led.ON|block": "亮",
+  "joystick.pressedZ|block": "摇杆Z 被按下",
+  "joystick.ZState|block": "摇杆Z |%event|",
+	"joystick.vibratorMotor|block": "振动电机 |%index|",
+	"joystick.vibratorMotorSpeed|block": "振动电机 强度|%degree|", 
+  "joystick.joystick_compare|block": "摇杆|%read_|%compare_|%value_",
+  "joystick.action|block": "摇杆| %pin | 幅度",
+  "joystick.TemperatureNumber|block": "|%p|读取温度2",
+	"joystick.led|block": "LED|%index|"
+}
