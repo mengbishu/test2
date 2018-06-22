@@ -190,11 +190,65 @@ namespace joystick {
         pins.digitalWritePin(DigitalPin.P16, <number>index);
     }
     
+    export enum pin {
+       //% block=pin0
+       pin0 = 0,
+       //% block=pin1
+       pin1 = 1,
+       //% block=pin2
+       pin2 = 2,
+       //% block=pin5
+       pin5 = 5,
+       //% block=pin8
+       pin8 = 8,
+       //% block=pin11
+       pin11 = 11,
+       //% block=pin12
+       pin12 = 12,
+       //% block=pin13
+       pin13 = 13,
+       //% block=pin14
+       pin14 = 14,
+       //% block=pin15
+       pin15 = 15,
+       //% block=pin16
+       pin16 = 16
+     }
+    
+    
    //% weight=10 blockId="Temperature_number" 
     //% block="|%p| Temperature_number "
     //% p.fieldEditor="gridpicker" p.fieldOptions.columns=4
-    export function TemperatureNumber(p: Led): number {
+    export function TemperatureNumber(p: pin): number {
         // Fake function for simulator
         return 1
     }
+    
+    //% weight=10 blockId="Temperature_string" 
+    //% block="|%p| Temperature_string "
+    //% p.fieldEditor="gridpicker" p.fieldOptions.columns=4
+    export function TemperatureString(p: pin) : string{
+        let temp = 1;
+        let x = (temp / 100)
+        let y = (temp % 100)
+        let z = ''
+        if(temp >= 0){
+          if(y < 10){
+            z = x.toString() + '.0' + y.toString()
+          }
+          else{
+            z = x.toString() + '.' + y.toString()
+          }
+        }
+        else if(temp < 0){
+          if(y > -10){
+            z = '-' + (-x).toString() + '.0' + (-y).toString()
+          }
+          else{
+            z = '-' + (-x).toString() + '.' + (-y).toString()
+          }
+        }
+        return z
+    }
+}
 }
