@@ -503,7 +503,7 @@ namespace DS18B20 {
       else
         match_ROM(address);
       onewire_byte_out(ConvertTempCommand);
-      wait_ms(80);
+      wait_ms(1);
       return onewire_bit_in();
     }
   };
@@ -535,6 +535,6 @@ namespace DS18B20 {
     oneWire.singleDeviceReadROM(address);
     oneWire.convertTemperature(address, true, true);
     return oneWire.temperature(address);
-    return 0;
+    //return 0;
   }
 }
