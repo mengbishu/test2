@@ -1,7 +1,7 @@
 {
-    "name": "joystick",
+    "name": "ds18b20",
     "version": "0.0.0",
-    "description": "This library is DFRobot joystick provides the game handle control function.",
+    "description": "DFRobot pxt-ds18b20,read temperature by ds18b20",
     "license": "MIT",
     "dependencies": {
         "core": "*",
@@ -10,8 +10,8 @@
     "files": [
         "README.md",
         "main.ts",
-        "joystick.cpp",
-        "_locales/zh/ds18b20-strings.json"
+        "_locales/zh/ds18b20-strings.json",
+        "ds18b20.cpp"
     ],
     "testFiles": [
         "test.ts"
