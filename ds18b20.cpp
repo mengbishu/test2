@@ -29,10 +29,8 @@
  */
 
 
-#include "MicroBit.h"
+#include "pxt.h"
 #include "TimedInterruptIn.h"
-#include "nrf_gpio.h"
-#include "nrf_delay.h"
 #include <cstdio>
 #include <cmath>
 #include <vector>
@@ -510,9 +508,10 @@ namespace DS18B20 {
   };
 */
   //MicroBit uBit;
+  MicroBitPin pin = uBit.io.P0;
   //%
   int16_t Temperature(int p) {
-    MicroBitPin pin = uBit.io.P0;
+    /*
     switch(p){
       case 0: pin = uBit.io.P0; break;
       case 1: pin = uBit.io.P1; break;
@@ -527,6 +526,7 @@ namespace DS18B20 {
       case 16: pin = uBit.io.P16; break;
       default: pin = uBit.io.P0;
     }
+    */
 //    OneWire oneWire(pin.name);
 //    oneWire.init();
 //    oneWire.findAllDevicesOnBus();
